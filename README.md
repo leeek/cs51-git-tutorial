@@ -14,7 +14,6 @@ How Git actually works is very cool, but for now just focus on getting used to u
 
 Relevant xkcd:
 ![xkcd](https://imgs.xkcd.com/comics/git_2x.png)
-<img src="https://github.com/favicon.ico" width="48">
 
 ## Setup ##
 
