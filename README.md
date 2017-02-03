@@ -13,6 +13,7 @@ This also suggests how Git can be useful if you want to work on the same piece o
 How Git actually works is very cool, but for now just focus on getting used to using it.
 
 Relevant xkcd:
+
 ![xkcd](https://imgs.xkcd.com/comics/git_2x.png)
 
 ## Setup ##
