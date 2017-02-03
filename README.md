@@ -112,7 +112,7 @@ made. Combine them into `git commit -am "message"` to commit all your changes ea
 doesn't work like `git add --all`, it doesn't check in (start tracking) any new files, it only commits changes
 to existing files.
 
-Realistically, most of your commits will look `git commit -am "meesage"`.
+Realistically, most of your commits will look like `git commit -am "meesage"`.
 
 ## Good to know for later: ##
 
