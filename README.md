@@ -6,7 +6,7 @@ Here's a diagram that's a good way to think about Git.
 ![Git Schematic]
 (https://www.cs.swarthmore.edu/~adanner/cs40/f14/gitrepos.gif)
 
-Notice that commits and adds are done to track changes **locally** on your computer, and push/pull is for synchronizing what you have on your machine with something that is stored online (i.e. _remote_ly). 
+Notice that commits and adds are done to track changes **locally** on your computer, and push/pull is for synchronizing what you have on your machine with something that is stored online (i.e. *remote*ly). 
 
 This also suggests how Git can be useful if you want to work on the same piece of code with someone else (e.g., have you ever made 10 versions of the same project, each slightly different, and tried to figure out how to put them together? With Git, this will happen much less).
 
