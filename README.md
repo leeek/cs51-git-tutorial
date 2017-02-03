@@ -165,11 +165,11 @@ keep stashing things and pop them off in reverse order.
 What if you want to see a history of commits? Run `git log`, and you should multiple entries like this:
 
 ```
-commit f92d6bf9346eac06d90665a1545bf20ad9a9dc06
-Author: Stefan Rajkovic <stefanrajkovic@colleg.harvard.edu>
-Date:   Sat Feb 6 16:06:15 2016 -0500
+commit c90bf58fab72874519b2837b1033a53cdecb5847
+Author: Kevin Lee <kevinlee01@college.harvard.edu>
+Date:   Fri Feb 3 02:27:55 2017 -0500
 
-    initial commit
+    kevin's edits
 ```
 
 The first line is the hash, a unique identifier for every commit, based on the changes in that commit.
