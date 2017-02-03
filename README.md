@@ -1,14 +1,29 @@
-# Stefan's CS51 Git Demo Repository #
-### Setup ###
+# CS51 Git Demo Repository #
+(based off of materials created by Stefan Rajkovic)
+
+## Overview ##
+Here's a diagram that's a good way to think about Git. 
+![Git Schematic]
+(https://www.cs.swarthmore.edu/~adanner/cs40/f14/gitrepos.gif)
+
+Notice that commits and adds are done to track changes **locally** on your computer, and push/pull is for synchronizing what you have on your machine with something that is stored online (i.e. _remote_ly). 
+
+This also suggests how Git can be useful if you want to work on the same piece of code with someone else (e.g., have you ever made 10 versions of the same project, each slightly different, and tried to figure out how to put them together? With Git, this will happen much less).
+
+How Git actually works is very cool, but for now just focus on getting used to using it.
+
+## Setup ##
 
 This repository, like many others, has a limited list of people permitted to commit to it (maintainers).
 In this case, it's just me. So, to start off, we're going to have to fork it. Click the button on the left
 side of your screen that says "Fork". Once you follow the directions there, you should have a copy of the
 repository on your own account.
 
+## Basic Functionality ##
+
 ### Cloning ###
 
-Git is a distributed version control system, meaning that everyone has their own copy of the repository.
+Git is a distributed version control system, meaning that everyone has their own copy of the repository (go look at the picture at the top again).
 You create your own copy by running `git clone`. Find the clone URL of your copy of the repostitory, in
 the same place as you would have found it for ps0, and clone the repository by running
 `git clone <repo_url> git-tutorial` in your terminal. That last argument is the name you want
@@ -16,8 +31,7 @@ the folder holding the repo to have, so let's run `cd git-tutorial` to move into
 
 ### Editing ###
 
-Now it's time to do some work. Make some changes to the repository, either by editing this file, (maybe
-change my name above to yours). Also, add a new file. The easiest way to do that is to run `touch new_file`.
+Now it's time to do some work. Make some changes to the repository. Start by editing this file (maybe put your name somewhere on this file). Also, add a new file. The easiest way to do that is to run `touch new_file`.
 
 ### Status ###
 
@@ -81,18 +95,20 @@ already committed, then `git show` will show you the diff from your last commit.
 
 Once you've added something to your staging area, you need to commit it. You can do that just by running `git commit`,
 which will bring up a console text editor to add a commit message. The default is often `vim`, which most people
-don't even know how to exit properly (myself included). If you want to change it, you can run 
+don't even know how to exit properly (if you're stuck, you can close the terminal. Otherwise, <Esc> :q! should get you out). If you want to change it, you can run 
 `git config --global core.editor "<your_favorite_editor>"`, replacing your favorite editor there. Note, that you'll
 likely want a console based editor, like `vi`, `emacs`, or `nano`, in there, since git doesn't exactly play nicely
 with GUI based editors in my experience.
 
 To avoid the whole tango of going into an editor, you can just run `git commit -m "Commit message"`, and write your
-commit message there instead.
+commit message there instead. **I highly recommend this**.
 
 To avoid having to add files manually, you can also run `git commit -a`, which will commit all the changes you've
 made. Combine them into `git commit -am "message"` to commit all your changes easily. *Careful:* `git commit -a`
 doesn't work like `git add --all`, it doesn't check in (start tracking) any new files, it only commits changes
 to existing files.
+
+Realistically, most of your commits will look `git commit -am "meesage"`.
 
 ### Branches ###
 
@@ -108,6 +124,8 @@ To make a new branch, run `git checkout -b <branch_name>`. From there, you can u
 to `master`, and use `git checkout <branch_name>` to get back to your new branch. Run 
 `git push --set-upstream origin <branch_name>` to push your branch to BitBucket. 
 
+In your projects in CS 51, you probably won't have to make branches, but it is a good feature to know about. If you ever do any work that involves coding (e.g. TF-ing this course), you'll probably use the branch command quite a bit.
+
 ### Merging ###
 
 Merging is a method of combining branches. Make any change on your separate branch, commit it, and then switch back
@@ -119,9 +137,9 @@ onto your `master` branch and make a new empty commit that let's people know whi
 
 What if while you had been working on your branch, someone else had made changes to `master`? And those changes 
 conflicted with yours? Git will automatically merge anything it can, but if you and a friend both changed the
-same lines, git doens't know what to do. It will tell you theres a merge conflict, and you need to fix it.
+same lines, git doesn't know what to do. It will tell you theres a merge conflict, and you need to fix it.
 You can run `git mergetool`, and it'll show you both sets of code side by side, and let you choose. You can
-also just edit the files that have conflicts (what command would show you them?) in your favorite text editor.
+also just edit the files that have conflicts (what command would show you them?) in your favorite text editor. This can look very scary when it happens the first time, but don't panic and you should be able to work through any issues.
 Once you're done, run `git commit` and it'll bring you to the editor and let you finish the merge.
 
 ### Pull ###
@@ -133,6 +151,8 @@ you don't get an empty merge commit message just for updating your branch. The r
 instead of a `merge`. Rebasing is a little bit more complicated, and if you're interested in the difference and why
 it matters, then we can talk about that after code review. One important note is that you can't pull if you have changes
 you haven't commited. But what if you don't want to commit, since you're code is still sort of broken?
+
+## Other cool stuff ##
 
 ### Stash ###
 
@@ -170,7 +190,7 @@ that lets you pick which branch you want to merge from, and which one you want t
 you to write a message, and maybe add some reviewers. If you clickthrough and open it, you should be brought to a page
 with the pull request and info about it, such as the diff, and the list of commits.
 
-### Summary ###
+## Summary ##
 
 The commands you'll use most are probably:
 
@@ -186,7 +206,7 @@ Once you start working with partners, you might find yourself using branches, or
 This is just a brief taste of git, which has an incredible number of other features, like `reflog`, `bisect`,
 `cherry-pick`, and `blame`. You probably won't use many of those, even when working with others on huge projects
 in the real world. I've still never used `bisect`, and only once used `reflog`, when myself and some partners thought
-we had lost a few hours of work during a HackWeek at Square. On that topic is git's best strength. **It's (near) impossible
+we had lost a few hours of work during a HackWeek at Square (source: Stefan). On that topic is git's best strength. **It's (near) impossible
 to lose anything if you're using git right**. Even if you're using it wrong, it's still really hard to lose anything. You
 really have to try, as long as you follow these rules:
 
@@ -198,6 +218,6 @@ really have to try, as long as you follow these rules:
 
 Hopefully that's all you'll need to know about git for a while! If you have any questions, feel free to ask!
 
-Sidenote: Dropbox has been known to horribly corrupt git repositories, so if you're still in the CS50 habit of keeping
+Sidenote: Dropbox has been known to horribly corrupt git repositories, so if you're still in the CS50 habit (the old CS 50 did this) of keeping
 your code in Dropbox for it's autosync features, I'd recommend you avoid that, and get used to commiting often. It's even
 possible to clean up your commits so that there aren't so many, so don't feel bad about spamming your git log.
