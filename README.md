@@ -16,14 +16,14 @@ Relevant xkcd:
 
 ![xkcd](https://imgs.xkcd.com/comics/git_2x.png)
 
-## Setup ##
+## Try this now: ##
+
+### Setup ###
 
 This repository, like many others, has a limited list of people permitted to commit to it (maintainers).
 In this case, it's just me. So, to start off, we're going to have to fork it. Click the button on the left
 side of your screen that says "Fork". Once you follow the directions there, you should have a copy of the
 repository on your own account.
-
-## Try this now: ##
 
 ### Cloning ###
 
