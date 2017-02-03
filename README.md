@@ -22,7 +22,7 @@ In this case, it's just me. So, to start off, we're going to have to fork it. Cl
 side of your screen that says "Fork". Once you follow the directions there, you should have a copy of the
 repository on your own account.
 
-## Basic Functionality ##
+## Try this now: ##
 
 ### Cloning ###
 
@@ -94,7 +94,7 @@ Short for difference, the diff is the changes you've made. Before you add someth
 `git diff` to see your changes. If you've already added but not commited, you can run `git diff HEAD`, and if you
 already committed, then `git show` will show you the diff from your last commit.
 
-### Commiting ###
+### Committing ###
 
 Once you've added something to your staging area, you need to commit it. You can do that just by running `git commit`,
 which will bring up a console text editor to add a commit message. The default is often `vim`, which most people
@@ -112,6 +112,8 @@ doesn't work like `git add --all`, it doesn't check in (start tracking) any new 
 to existing files.
 
 Realistically, most of your commits will look `git commit -am "meesage"`.
+
+## Good to know for later: ##
 
 ### Branches ###
 
@@ -154,8 +156,6 @@ you don't get an empty merge commit message just for updating your branch. The r
 instead of a `merge`. Rebasing is a little bit more complicated, and if you're interested in the difference and why
 it matters, then we can talk about that after code review. One important note is that you can't pull if you have changes
 you haven't commited. But what if you don't want to commit, since you're code is still sort of broken?
-
-## Other cool stuff ##
 
 ### Stash ###
 
